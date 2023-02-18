@@ -1,0 +1,13 @@
+{
+  "name": "serverless-offline-reload-bug",
+  "exports": "./src/handler.js",
+  "scripts": {
+    "start": "serverless offline start"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless": "^3.27.0",
+    "serverless-offline": "^12.0.4"
+  }
+}

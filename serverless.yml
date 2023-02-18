@@ -1,0 +1,26 @@
+service: http
+
+configValidationMode: error
+deprecationNotificationMode: error
+
+plugins:
+  - serverless-offline
+
+provider:
+  architecture: arm64
+  deploymentMethod: direct
+  memorySize: 1024
+  name: aws
+  region: us-east-1
+  runtime: nodejs16.x
+  stage: dev
+  versionFunctions: false
+
+functions:
+  hello:
+    events:
+      - http:
+          # integration: lambda
+          method: get
+          path: hello
+    handler: src/handler.hello
